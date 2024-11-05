@@ -9,21 +9,20 @@
     /* Set up body styling for scrollable content */
     body {
       color: white;
-      position: relative;
+      margin: 0;
+      height: 100%;
       overflow-y: auto;
-      height: 100vh;
       background-color: #333;
     }
 
     /* Background video styling */
     .background-video {
       position: fixed;
-      top: 50%;
-      left: 50%;
+      top: 0;
+      left: 0;
       width: 100vw;
       height: 100vh;
       object-fit: cover;
-      transform: translate(-50%, -50%);
       z-index: -1;
     }
 
@@ -31,42 +30,16 @@
     .container {
       position: relative;
       z-index: 1;
-      padding-bottom: 2rem;
-    }
-
-    /* Horizontal scrolling container for cards */
-    .cards-container {
-      display: flex;
-      overflow-x: auto;
-      gap: 1rem;
-      padding-bottom: 1rem;
-      scrollbar-width: thin;
-    }
-
-    .cards-container::-webkit-scrollbar {
-      height: 8px;
-    }
-
-    .cards-container::-webkit-scrollbar-thumb {
-      background-color: #666;
-      border-radius: 4px;
-    }
-
-    /* Flex styling for cards */
-    .card {
-      min-width: 18rem;
-      flex: 0 0 auto;
+      padding: 2rem;
     }
 
     /* Hoverable circle with text */
     .app-cover {
-      position: relative;
       width: 80px;
       height: 80px;
       border-radius: 50%;
       background-color: #f44336;
       box-shadow: 0 0 0 8px #feeeed;
-      overflow: hidden;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -89,6 +62,13 @@
       flex-wrap: wrap;
       gap: 1rem;
       justify-content: center;
+      padding-bottom: 2rem;
+    }
+
+    /* Center align and responsive text */
+    .text-center h2, .text-center p {
+      color: white;
+      margin: 0;
     }
   </style>
 </head>
@@ -96,28 +76,26 @@
 
   <!-- Background video -->
   <video autoplay muted loop class="background-video">
-    <source src="nature.mp4" type="video/mp4">
+    <source src="forst.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
        
   <!-- Profile Picture and Title -->
   <div class="text-center my-4">
     <img src="one.png" alt="Your Name" class="rounded-circle mb-3" width="150" height="150">
-    <h2 style="color: white;">Patel Nayan</h2>
-    <p style="color: white;">Student</p>
+    <h2 style="color: black;">Patel Nayan</h2>
+    <p style="color: black;">Student</p>
   </div>
 
+  <!-- Social Media Section -->
   <div class="container">
     <div class="row">
       <div class="col-12">
-        <h2 class="text-white text-center">Social Media:</h2>
+        <h2 class="text-black text-center">Social Media:</h2>
         <hr style="border: none; height: 5px; background-color: white;">
       </div>
     </div>
-  </div>
 
-  <div class="container mt-4">
-    <!-- Social Media Icons with Responsive Flex Wrapping -->
     <div class="social-icons">
       <a href="https://github.com/Nayanpatel48" target="_blank">
         <div class="app-cover">

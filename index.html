@@ -74,6 +74,27 @@
 </head>
 <body>
 
+  <!-- Audio component -->
+  <audio id="background-audio" autoplay loop>
+    <source src="song.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <script>
+    // Select the audio element
+    const audio = document.getElementById("background-audio");
+
+    // Set the initial volume (range: 0.0 to 1.0)
+    audio.volume = 0.5; // Adjust volume here
+
+    // Set the playback speed (e.g., 1.0 is normal speed)
+    audio.playbackRate = 1.2; // Adjust speed here
+
+    // Play the audio (will auto-play and loop based on the attributes)
+    audio.play().catch(error => {
+      console.log("Audio playback issue: ", error);
+    });
+  </script>
   <!-- Background video -->
   <video autoplay muted loop class="background-video">
     <source src="forst.mp4" type="video/mp4">
